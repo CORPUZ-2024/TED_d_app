@@ -73,11 +73,11 @@ These states were West Virginia, Oregon, Georgia, South Carolina and Washington.
 
 ####### Data Uploads
 ## For Regression 
-outp_7m_3= pd.read_csv('C:/Users/16502/Documents/Capstone/outp_7m_3a.csv')
+#outp_7m_3= pd.read_csv('C:/Users/16502/Documents/Capstone/outp_7m_3a.csv')
 
 
 ## Shows first n entries of the df 
-st.write(outp_7m_3.head(6))
+#st.write(outp_7m_3.head(6))
 
 st.header('Exploratory Data Analysis')
 """
