@@ -149,7 +149,7 @@ st.plotly_chart(fig_hom)
 """
 **Age:** About 40% of PiRs in this dataset were between 21 and 34 years old. Individuals between 35 to 49 years old trailed behind at 32%.
 """
-labels= outp_7m_3.AGE_GRP.unique().tolist()
+labels= ['20 and Under', '35 to 49 yrs', '21 to 34 yrs', '50 and Over']
 values=  [685724, 2449142, 3072901, 1452794]
 
 colors = ['blue','red','lightblue','orange']
