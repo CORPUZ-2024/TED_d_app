@@ -263,7 +263,7 @@ a drastic deviation from the treatment group occurs during the treatment period,
 To illustrate the Parallel Trend Assumption, the mean discharge status value for treatment and control states were plotted against discharge year with the 
 treatment states grouped according to its respective implementation year to account for the staggered adoption of the expansion. 
 """
-dd_pta = Image.open('Datasets/paral_outp.jpg')
+dd_pta = Image.open('Images/paral_outp.jpg')
 st.image(dd_pta)
 
 
