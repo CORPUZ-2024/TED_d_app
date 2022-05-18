@@ -87,8 +87,7 @@ In this section, we explore some of the features to get more insights on the tre
 **Discharge Rates:** Overall, the median annual discharge rates nationwide remained between 40% to 30% with the highest median level recorded 
 in 2009 at 43.5% which steadily declined in the following years. Furthermore, the spread for each year tended to be normal in distribution among the states. 
 
-
-
+"""
 dis_rate= pd.read_csv('dis_rate_agg.csv')
 
 fig_dis2 = px.box(dis_rate, x="year", y="tmp_rate",notched=True,  hover_data=["state"], color_discrete_sequence=[ "#e884d6"])
@@ -98,9 +97,6 @@ fig_dis2.update_xaxes(nticks=15)
 
 st.plotly_chart(fig_dis2)
 
-
-
-"""
 **Medicaid as Primary Payment Source:** Since our analysis is focused on the effects of Medicaid on treatment outcomes, it might be relevant to know the 
 rate of which Medicaid was used as the primary payment source at admission. While the mean rate stayed between 0% to 20% ,
 there is a noticeable positive skew in the distribution for each year meaning that there are many states that recorded
