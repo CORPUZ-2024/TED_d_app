@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 import plotly.express as px
 
-import Datasets 
+import Datasets, Images 
 
 from PIL import Image
 
@@ -275,7 +275,7 @@ While no immediate effect on average discharge status can be observed after 2014
 onwards while the opposite is true for the 2016 group where a dip can be observed after 2016. 
 """
 #dis_rate_imp= pd.read_csv('C:/Users/16502/Documents/Capstone/dis_rate_imp.csv')
-dd_pta_disrate = Image.open("C:/Users/16502/Documents/Capstone/para_dis_rate.jpg")
+dd_pta_disrate = Image.open("Images/para_dis_rate.jpg")
 st.image(dd_pta_disrate)
 
 """
@@ -335,7 +335,7 @@ dd_rt.summary()
 st.code(dd_rt, language='python')
 
 ##results dd
-dd_res = Image.open("C:/Users/16502/Documents/Capstone/dd_modsf.jpg")
+dd_res = Image.open("Images/dd_modsf.jpg")
 st.image(dd_res)
 
 """
@@ -368,7 +368,7 @@ FE_rt.summary()
 st.code(FE_rt, language='python')
 
 ##results 2W
-fe_res = Image.open("C:/Users/16502/Documents/Capstone/fe_modsf.jpg")
+fe_res = Image.open("Images/fe_modsf.jpg")
 st.image(fe_res)
 
 """
