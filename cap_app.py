@@ -88,7 +88,7 @@ In this section, we explore some of the features to get more insights on the tre
 in 2009 at 43.5% which steadily declined in the following years. Furthermore, the spread for each year tended to be normal in distribution among the states. 
 
 """
-dis_rate= pd.read_csv('dis_rate_agg.csv')
+dis_rate= pd.read_csv('Dataset/dis_rate_agg.csv')
 
 fig_dis2 = px.box(dis_rate, x="year", y="tmp_rate",notched=True,  hover_data=["state"], color_discrete_sequence=[ "#e884d6"])
 fig_dis2.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
@@ -104,7 +104,7 @@ there is a noticeable positive skew in the distribution for each year meaning th
 Medicaid utilization rates that are higher than the average. The degree of the positive skew peaked in 2009 at 52% then 
 decreased to around 35% to 28% in the following years until 2013. A similar pattern occurred between 2013 and 2019. 
 """
-ptype_rate= pd.read_csv("C:/Users/16502/Documents/Capstone/ptype_rate.csv")
+ptype_rate= pd.read_csv('Dataset/ptype_rate.csv')
 
 fig_ptype = px.box(ptype_rate, x="year", y="medicaid_use",notched=True, hover_data=["state"],  color_discrete_sequence=[ "#01661e"])
 fig_ptype.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
@@ -120,7 +120,7 @@ episodes that involved individuals with prior treatment history between 2015-201
 for 2019 with the median rate of 39% which only means that while a lot more of the states reported rates in the 40s and above,there were also states 
 with lower percentage of folks with prior treatment episodes which was not the case in the previous 4 years.  
 """
-prior_rate= pd.read_csv('C:/Users/16502/Documents/Capstone/prior_rate.csv') 
+prior_rate= pd.read_csv('Dataset/prior_rate.csv') 
 fig_prior = px.box(prior_rate, x="year", y="discharge_rate",notched=True, hover_data=["state"], color_discrete_sequence=[ "#b83209"])
 fig_prior.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
 fig_prior.update_layout(title_text= "<b> Prior Treatment Attendance </b>", title_x=0.5)
@@ -134,7 +134,7 @@ median percentage of homeless PiRs across the states hovered below 5% every year
 the positive skew of these spreads steadily grew from 2015 onwards which indicated growing prevalence of homelessness among PiRs.  
 """
 
-homeless_rate= pd.read_csv("C:/Users/16502/Documents/Capstone/homeless_rate.csv")
+homeless_rate= pd.read_csv('Dataset/homeless_rate.csv')
 fig_hom = px.box(homeless_rate, x="year", y="homeless_rate",notched=True, hover_data=["state"], color_discrete_sequence=[ "#FF7F0E"] )
 fig_hom.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
 fig_hom.update_layout(title_text= "<b>Homeless Rate per Year during Admission</b>", title_x=0.5)
@@ -158,7 +158,7 @@ st.plotly_chart(fig_age)
 """
 **Race:** White PiRs significantly outnumbered all of the other race categories each year with African Americans being the second largest group. 
 """
-race_agg = pd.read_csv('C:/Users/16502/Documents/Capstone/race_agg2.csv')
+race_agg = pd.read_csv('Dataset/race_agg2.csv')
 fig_race = px.histogram(race_agg, 
             x="DISYR", 
             y="count", 
@@ -172,7 +172,7 @@ st.plotly_chart(fig_race)
 """
 **Gender:** Men significantly outnumbered women in this dataset.  
 """
-gender_agg = pd.read_csv('C:/Users/16502/Documents/Capstone/gender_agg.csv')
+gender_agg = pd.read_csv('Dataset/gender_agg.csv')
 fig_gender = px.histogram(gender_agg, 
             x="DISYR", 
             y="count", 
@@ -198,7 +198,7 @@ but in lower volumes, the 2015 group steadily increased over time. Lastly, the 2
 
 """
 
-imp_yr_agg=  pd.read_csv('C:/Users/16502/Documents/Capstone/eda_sets/imp_yr_agg.csv')
+imp_yr_agg=  pd.read_csv('Dataset/imp_yr_agg.csv')
 
 fig_s = px.histogram(imp_yr_agg, 
             x="DISYR", 
@@ -216,7 +216,7 @@ seemed to gradually decrease in numbers as opposed to being constant. The likene
 the overall seasonality and level of representation of the treatment and the control states are still reminiscent of the 7m set. Therefore, we can 
 proceed with some caution in using the 1m set in our regressions. 
 """
-imp_yr_agg_1m= pd.read_csv('C:/Users/16502/Documents/Capstone/eda_sets/imp_yr_agg_1m.csv')
+imp_yr_agg_1m= pd.read_csv('Dataset/imp_yr_agg_1m.csv')
 fig_sm = px.histogram(imp_yr_agg_1m, 
             x="DISYR", 
             y="count", 
@@ -259,7 +259,7 @@ a drastic deviation from the treatment group occurs during the treatment period,
 To illustrate the Parallel Trend Assumption, the mean discharge status value for treatment and control states were plotted against discharge year with the 
 treatment states grouped according to its respective implementation year to account for the staggered adoption of the expansion. 
 """
-dd_pta = Image.open("C:/Users/16502/Documents/Capstone/paral_outp.jpg")
+dd_pta = Image.open('Dataset/paral_outp.jpg')
 st.image(dd_pta)
 
 
