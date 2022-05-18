@@ -7,6 +7,8 @@ import plotly.graph_objects as go
 
 import plotly.express as px
 
+import Datasets as data
+
 from PIL import Image
 
 import os
@@ -89,8 +91,8 @@ in 2009 at 43.5% which steadily declined in the following years. Furthermore, th
 
 """
 #https://github.com/corpuzn12/TED_d_app/blob/main/Datasets/dis_rate_agg.csv
-
-dis_rate= pd.read_csv('https://github.com/corpuzn12/TED_d_app/blob/main/Datasets/dis_rate_agg.csv')
+dis_rate = data.dis_rate_agg.csv
+dis_rate= pd.read_csv(dis_rate)
 
 fig_dis2 = px.box(dis_rate, x="year", y="tmp_rate",notched=True,  hover_data=["state"], color_discrete_sequence=[ "#e884d6"])
 fig_dis2.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
