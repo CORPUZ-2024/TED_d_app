@@ -97,6 +97,7 @@ fig_dis2.update_xaxes(nticks=15)
 
 st.plotly_chart(fig_dis2)
 
+"""
 **Medicaid as Primary Payment Source:** Since our analysis is focused on the effects of Medicaid on treatment outcomes, it might be relevant to know the 
 rate of which Medicaid was used as the primary payment source at admission. While the mean rate stayed between 0% to 20% ,
 there is a noticeable positive skew in the distribution for each year meaning that there are many states that recorded
