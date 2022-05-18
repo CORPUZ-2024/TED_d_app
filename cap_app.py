@@ -89,9 +89,9 @@ in 2009 at 43.5% which steadily declined in the following years. Furthermore, th
 
 """
 
-dis_rate = open('./disrate_annu_agg.csv')
+#dis_rate = open('https://github.com/corpuzn12/TED_d_app/blob/main/disrate_annu_agg.csv')
 
-#dis_rate= pd.read_csv(dis_rate)
+dis_rate= pd.read_csv(https://github.com/corpuzn12/TED_d_app/blob/main/disrate_annu_agg.csv)
 
 fig_dis2 = px.box(dis_rate, x="year", y="tmp_rate",notched=True,  hover_data=["state"], color_discrete_sequence=[ "#e884d6"])
 fig_dis2.update_traces(quartilemethod="exclusive") # or "inclusive", or "linear" by default
