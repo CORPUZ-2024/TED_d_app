@@ -21,7 +21,7 @@ for Medicaid benefits under the Affordable Care Act’s (ACA) Medicaid expansion
 """
 
 
-st.header('hodwy')
+st.header('Overview')
 """
 In investigating the causal relationship between Medicaid expansion and successful treatment completions for substance use disorder, 
 the Difference -in- Differences Model and Two-way Fixed Effects model were used to analyze a panel data of discharge events between 2009 and 2019. 
@@ -91,7 +91,7 @@ in 2009 at 43.5% which steadily declined in the following years. Furthermore, th
 
 @st.cache(ttl=3*60*60, suppress_st_warning=True)
 def get_data():
-    dis_rate = 'https://github.com/corpuzn12/TED_d_app/blob/main/disrate_annu_agg.csv'
+    dis_rate = 'https://github.com/corpuzn12/TED_d_app/main/disrate_annu_agg.csv'
     dis_rate = pd.read_csv(dis_rate)
     return confirmed
 
